@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Network Topology: Star</title>
+  <title>Network Topology: Bus</title>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.min.css">
   <link rel="stylesheet" href="css/bootstrap.min.css">
@@ -18,12 +18,12 @@
   <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body onload="initialise()">
-  <div class="box" id="box1" style="position: absolute;">
+  <div class="box" style="position: absolute;">
     <section class="content">
       <br>
       <section class="content-header">
         <div id="con">
-          <h3 id="con-head" align="center" style="color: #272343; font-family: 'Raleway', sans-serif;">Network Topology: Star</h3>
+          <h3 id="con-head" align="center" style="color: #272343; font-family: 'Raleway', sans-serif;">Network Topology: Bus</h3>
         </div>
       </section>
       <br>
@@ -32,8 +32,8 @@
     <div>
       <label for="dropdown"><b>Choose the Network you would like to implement:</b></label>
       <select id="dropdown" onchange="redirect();">
-        <option value="star" selected>Star Topology</option>
-        <option value="bus">Bus Topology</option>
+        <option value="star">Star Topology</option>
+        <option value="bus" selected>Bus Topology</option>
         <option value="ring">Ring Topology</option>
         <option value="mesh">Mesh Topology</option>
         <option value="hybrid">Hybrid Topology</option>
@@ -42,47 +42,46 @@
 
     <button type="button" class="ins" onclick="myFunction()">INSTRUCTIONS</button>
     <div id="myDropdown" class="dropdown-content">
-      <p style="text-align: justify; line-height: 1.4">
+      <p style="text-align:justify; line-height: 1.4">
         <b>To perform the simulation, follow the below given steps:</b><br>
-        <b>1.</b> Select the topology from the dropdown that you would like to implement.<br>
-        <b>2.</b> Click on either PC or laptop (present at the bottom) to place the device on the working area.<br>
-        - You can create a topology using any number of end devices, but here we will use a total of four.<br>
-        <b>3.</b> Now click on either switch or hub.<br>
-        <b>4.</b> Connect all the end devices with the central device as shown in Fig. 1 (click on the image for a better view).<br>
-        <b>NOTE:</b> Click a device port and drag and drop it to another device port to connect.<br>
+        <b>1.</b> Click on either PC or laptop (present at the bottom) to place them on the working area.<br>
+        - You can create topology using any number of end devices, but here we will use a total of four.<br>
+        <b>2.</b> Click on cable.<br>
+        <b>3.</b> Click twice on the terminator.<br>
+        <b>4.</b> Now connect end devices with the main cable as shown in Fig. 1 (click on the image for a better view).<br>
+        <b>NOTE: </b> Click device port and drag and drop it to the port of the cable you want to connect.<br>
       </p>
       <center>
-        <img id="starImg" style="width: 160px; height: 108px" title="click on image" alt="Reference image for star topology. Use any device like PC with a Switch, Laptop with a Hub, etc." src="images/star.png"><br>
-        <b>Fig. 1 Reference image for star topology</b>
+        <img id="busImg" style="width: 180px; height: 118px" title="click on image" alt="Reference image for bus topology. Connect devices to any connector on the cable." src="images/bus.png"><br>
+        <b>Fig. 1 Reference image for bus topology</b>
       </center>
-      <p style="text-align: justify; line-height: 1.4">
+      <p style="text-align:justify; line-height: 1.4">
         <b>5.</b> Once the topology is constructed, click on the check button to verify if the constructed topology is built correctly or not.<br>
       </p>
     </div>
 
     <div id="mid">
-      <div id="PC1"><img src="images/computer.png" id="comp1" width="100" height="100" alt="PC-1">
+      <div id="PCB1"><img src="images/computer.png" id="comp1" width="100" height="100" alt="PC-1">
         <label style="font-size: 15px; color: blue; position: absolute; top: -2px; left: 33px;"><b>PC-1</b></label></div>
-      <div id="PC2"><img src="images/computer.png" id="comp2" width="100" height="100" alt="PC-2">
-        <label style="font-size: 15px; color: blue; position: absolute; top: -2px; left: 33px;"><b>PC-2</b></label></div>
-      <div id="PC3"><img src="images/computer.png" id="comp3" width="100" height="100" alt="PC-3">
-        <label style="font-size: 15px; color: blue; position: absolute; top: 80px; left: 33px;"><b>PC-3</b></label></div>
-      <div id="PC4"><img src="images/computer.png" id="comp4" width="100" height="100" alt="PC-4">
+      <div id="PCB2"><img src="images/computer.png" id="comp2" width="100" height="100" alt="PC-3">
+        <label style="font-size: 15px; color: blue; position: absolute; top: -2px; left: 33px;"><b>PC-3</b></label></div>
+      <div id="PCB3"><img src="images/computer.png" id="comp3" width="100" height="100" alt="PC-2">
+        <label style="font-size: 15px; color: blue; position: absolute; top: 80px; left: 33px;"><b>PC-2</b></label></div>
+      <div id="PCB4"><img src="images/computer.png" id="comp4" width="100" height="100" alt="PC-4">
         <label style="font-size: 15px; color: blue; position: absolute; top: 80px; left: 33px;"><b>PC-4</b></label></div>
 
-      <div id="LP1"><img src="images/laptop.png" id="lap1" width="100" height="86" alt="Laptop-1">
-        <label style="font-size: 15px; color: blue; position: absolute; top: 80px; left: 20px;"><b>Laptop-1</b></label></div>
-      <div id="LP2"><img src="images/laptop.png" id="lap2" width="100" height="86" alt="Laptop-2">
-        <label style="font-size: 15px; color: blue; position: absolute; top: 80px; left: 20px;"><b>Laptop-2</b></label></div>
-      <div id="LP3"><img src="images/laptop.png" id="lap3" width="100" height="86" alt="Laptop-3">
-        <label style="font-size: 15px; color: blue; position: absolute; top: 80px; left: 20px;"><b>Laptop-3</b></label></div>
-      <div id="LP4"><img src="images/laptop.png" id="lap4" width="100" height="86" alt="Laptop-4">
-        <label style="font-size: 15px; color: blue; position: absolute; top: 80px; left: 20px;"><b>Laptop-4</b></label></div>
+      <div id="LPB1"><img src="images/laptop.png" id="lap1" width="110" height="86" alt="Laptop-1">
+        <label style="font-size: 15px; color: blue; position: absolute; top: -17px; left: 27px;"><b>Laptop-1</b></label></div>
+      <div id="LPB2"><img src="images/laptop.png" id="lap2" width="110" height="86" alt="Laptop-3">
+        <label style="font-size: 15px; color: blue; position: absolute; top: -17px; left: 27px;"><b>Laptop-3</b></label></div>
+      <div id="LPB3"><img src="images/laptop.png" id="lap3" width="110" height="86" alt="Laptop-2">
+        <label style="font-size: 15px; color: blue; position: absolute; top: 80px; left: 26px;"><b>Laptop-2</b></label></div>
+      <div id="LPB4"><img src="images/laptop.png" id="lap4" width="110" height="86" alt="Laptop-4">
+        <label style="font-size: 15px; color: blue; position: absolute; top: 80px; left: 26px;"><b>Laptop-4</b></label></div>
 
-      <div id="HUB1"><img src="images/iswitch.png" id="h1" width="100" height="75" alt="Hub">
-        <label style="font-size: 15px; color: red; position: absolute; top: 0px; left: 33px;"><b>HUB</b></label></div>
-      <div id="SWITCH1"><img src="images/iswitch1.png" id="s1" width="100" height="75" alt="Switch">
-        <label style="font-size: 15px; color: red; position: absolute; top: 0px; left: 23px;"><b>SWITCH</b></label></div>
+      <div id="CAB"><img src="images/backbone.jpg" id="cab1" width="700" alt="Backbone Cable"></div>
+      <div id="TER1"><img src="images/terminator.jpg" id="term1" alt="Terminator 1"></div>
+      <div id="TER2"><img src="images/terminator.jpg" id="term2" alt="Terminator 2"></div>
     </div>
 
     <div id="myModal" class="modal">
@@ -94,7 +93,7 @@
     <script>
       // Modal functionality
       var modal = document.getElementById("myModal");
-      var img = document.getElementById("starImg");
+      var img = document.getElementById("busImg");
       var modalImg = document.getElementById("img01");
       var captionText = document.getElementById("caption");
       img.onclick = function() {
@@ -111,8 +110,8 @@
     <fieldset class="components" id="Components">
       <div class="item"><img id="com" width="100" height="100" class="image" src="images/computer.png" onclick="imgDraw('com')" alt="PC"><span class="caption">PC</span></div>
       <div class="item"><img id="lap" width="100" height="86" class="image" src="images/laptop.png" onclick="imgDraw('lap')" alt="Laptop"><span class="caption">Laptop</span></div>
-      <div class="item"><img id="iswitch" width="100" height="75" class="image" src="images/iswitch.png" onclick="imgDraw('iswitch')" alt="Hub"><span class="caption">Hub</span></div>
-      <div class="item"><img id="iswitch1" width="100" height="100" class="image" src="images/iswitch1.png" onclick="imgDraw('iswitch1')" alt="Switch"><span class="caption">Switch</span></div>
+      <div class="item"><img id="cable" width="108" height="100" class="image" src="images/st2.png" style="mix-blend-mode: darken;" onclick="imgDraw('cable')" alt="Cable"><span class="caption">Cable</span></div>
+      <div class="item"><img id="terminator" class="image" src="images/terminator.jpg" onclick="imgDraw('terminator')" alt="Terminator"><span class="caption">Terminator</span></div>
       <div class="item"><img id="ireset" width="108" height="100" class="image" src="images/ree.png" onclick="reset()" alt="Reset"><span class="caption">Reset</span></div>
       <div class="item"><img id="ievaluate" width="100" height="100" class="image" src="images/ev.png" onclick="evaltop()" alt="Check"><span class="caption">Check</span></div>
     </fieldset>
@@ -121,7 +120,7 @@
       &copy; 2024 Virtual Labs, IIT Roorkee
     </div>
 
-    <script src="js/main.js"></script>
+    <script src="js/bus.js"></script>
     <script>
       function myFunction() {
         console.log("check");
@@ -152,12 +151,12 @@
         content: "LAPTOP",
         followCursor: true,
       });
-      tippy('#iswitch', {
-        content: "HUB",
+      tippy('#cable', {
+        content: "CABLE",
         followCursor: true,
       });
-      tippy('#iswitch1', {
-        content: "SWITCH",
+      tippy('#terminator', {
+        content: "TERMINATOR",
         followCursor: true,
       });
       tippy('#ireset', {

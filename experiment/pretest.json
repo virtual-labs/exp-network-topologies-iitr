@@ -1,39 +1,119 @@
 {
-  "version": 2.0,
-  "questions": [
-    {
-      "question": "This is a Sample Question 1?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+  "content": {
+    "title": "Implementation of Different Network Topologies",
+    "section": "Post-Test",
+    "questions": [
+      {
+        "id": "q1",
+        "question": "If one link fails, only that link is affected. All other links remain active. Which topology is this?",
+        "options": [
+          "a. Mesh Topology",
+          "b. Star Topology",
+          "c. Bus Topology",
+          "d. Physical Topology"
+        ],
+        "answer": "b"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      {
+        "id": "q2",
+        "question": "The Network Topology that supports bi-directional links between each possible node.",
+        "options": [
+          "a. Ring",
+          "b. Mesh",
+          "c. Star",
+          "d. Tree"
+        ],
+        "answer": "b"
       },
-      "correctAnswer": "a",
-      "difficulty": "beginner"
-    },
-    {
-      "question": "This is a Sample Question 2?",
-      "answers": {
-        "a": "answer1",
-        "b": "answer2",
-        "c": "answer3",
-        "d": "answer4"
+      {
+        "id": "q3",
+        "question": "What are the advantages of hybrid topology?",
+        "options": [
+          "a. Scalable",
+          "b. Flexible networking topology",
+          "c. Highly efficient",
+          "d. All of the above"
+        ],
+        "answer": "d"
       },
-      "explanations": {
-        "a": "Explanation 1  <a href='www.google.com'>here</a>",
-        "b": "Explanation 2",
-        "c": "Explanation 2",
-        "d": "Explanation 2"
+      {
+        "id": "q4",
+        "question": "In which topology, if the computer cable is broken, the network goes down?",
+        "options": [
+          "a. Irregular",
+          "b. Ring",
+          "c. Bus",
+          "d. Star"
+        ],
+        "answer": "c"
       },
-      "correctAnswer": "c",
-      "difficulty": "beginner"
-    }
-  ]
+      {
+        "id": "q5",
+        "question": "For large networks which topology is generally used?",
+        "options": [
+          "a. Bus",
+          "b. Ring",
+          "c. Irregular",
+          "d. Star"
+        ],
+        "answer": "d"
+      },
+      {
+        "id": "q6",
+        "question": "Terminators are used in which topology?",
+        "options": [
+          "a. Ring",
+          "b. Bus",
+          "c. Irregular",
+          "d. Star"
+        ],
+        "answer": "b"
+      },
+      {
+        "id": "q7",
+        "question": "What is the central device in star topology?",
+        "options": [
+          "a. Hub",
+          "b. Switch",
+          "c. Both a and b",
+          "d. None of the above"
+        ],
+        "answer": "c"
+      },
+      {
+        "id": "q8",
+        "question": "The data in ring topology moves in _______________ direction.",
+        "options": [
+          "a. One",
+          "b. Two",
+          "c. Four",
+          "d. Doesn’t move"
+        ],
+        "answer": "a"
+      },
+      {
+        "id": "q9",
+        "question": "The topology with highest reliability is:",
+        "options": [
+          "a. Bus topology",
+          "b. Star topology",
+          "c. Ring topology",
+          "d. Mesh topology"
+        ],
+        "answer": "d"
+      },
+      {
+        "id": "q10",
+        "question": "Repeater are used in _______________.",
+        "options": [
+          "a. Mesh Topology",
+          "b. Star Topology",
+          "c. Bus Topology",
+          "d. Ring Topology"
+        ],
+        "answer": "d"
+      }
+    ]
+  }
 }
+
