@@ -82,7 +82,7 @@
           "a": "One",
           "b": "Two",
           "c": "Four",
-          "d": "Doesn’t move"
+          "d": "Does not move"
         },
         "correctAnswer": "a"
       },
