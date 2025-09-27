@@ -1,0 +1,113 @@
+[
+  {
+        "question": "If one link fails, only that link is affected. All other links remain active. Which topology is this?",
+        "answers": {
+          "a": "Mesh Topology",
+          "b": "Star Topology",
+          "c": "Bus Topology",
+          "d": "Physical Topology"
+        },
+        "correctAnswer": "b"
+      },
+      {
+      
+        "question": "The Network Topology that supports bi-directional links between each possible node.",
+        "answers": {
+          "a": "Ring",
+          "b": "Mesh",
+          "c": "Star",
+          "d": "Tree"
+        },
+        "correctAnswer": "b"
+      },
+      {
+       
+        "question": "What are the advantages of hybrid topology?",
+        "answers": {
+          "a": "Scalable",
+          "b": "Flexible networking topology",
+          "c": "Highly efficient",
+          "d": "All of the above"
+        },
+        "correctAnswer": "d"
+      },
+      {
+      
+        "question": "In which topology, if the computer cable is broken, the network goes down?",
+        "answers": {
+          "a": "Irregular",
+          "b": "Ring",
+          "c": "Bus",
+          "d": "Star"
+        },
+        "correctAnswer": "c"
+      },
+      {
+      
+        "question": "For large networks which topology is generally used?",
+        "answers": {
+          "a": "Bus",
+          "b": "Ring",
+          "c": "Irregular",
+          "d": "Star"
+        },
+        "correctAnswer": "d"
+      },
+      {
+  
+        "question": "Terminators are used in which topology?",
+        "answers": {
+          "a": "Ring",
+          "b": "Bus",
+          "c": "Irregular",
+          "d": "Star"
+        },
+        "correctAnswer": "b"
+      },
+      {
+
+        "question": "What is the central device in star topology?",
+        "answers": {
+          "a": "Hub",
+          "b": "Switch",
+          "c": "Both a and b",
+          "d": "None of the above"
+        },
+        "correctAnswer": "c"
+      },
+      {
+       
+        "question": "The data in ring topology moves in _______________ direction.",
+        "answers": {
+          "a": "One",
+          "b": "Two",
+          "c": "Four",
+          "d": "Does not move"
+        },
+        "correctAnswer": "a"
+      },
+      {
+        
+        "question": "The topology with highest reliability is:",
+        "answers": {
+          "a": "Bus topology",
+          "b": "Star topology",
+          "c": "Ring topology",
+          "d": "Mesh topology"
+        },
+        "correctAnswer": "d"
+      },
+      {
+       
+        "question": "Repeater are used in _______________.",
+        "answers": {
+          "a": "Mesh Topology",
+          "b": "Star Topology",
+          "c": "Bus Topology",
+          "d": "Ring Topology"
+        },
+        "correctAnswer": "d"
+      }
+    ]
+
+

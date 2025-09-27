@@ -1,0 +1,666 @@
+body{
+    z-index:-3;
+    position:absolute;
+    width:100%;
+    height:100%;
+  }
+  
+  
+  
+ .image:hover  {opacity: 0.7;} 
+
+  div { text-align: center; }
+  div.item {
+      display: inline-block;
+      text-align: center;
+      width: 100px;
+  }
+  .caption {
+      display: block;
+  
+  }
+  
+  .box{	  
+          width: 1380px;
+          height: 800px;
+          z-index:-2;
+          border: 3px solid black;
+          background-color: #e3f6f5;    
+      }
+  
+      .disable {
+        opacity: 0.5;
+      }  
+  
+      .ins{
+    position: absolute;
+    top:11%;
+    right:95px;
+    background-color:#ffd803;
+    color:#272343;
+    border-radius: 6px;
+    font-size: 18px;
+    font-family: Raleway, sans-serif;
+    font-weight: bold;
+  }
+  .ins:hover {
+   background-color: #bae8e8;
+   color: #000;
+   align-content: center;
+  }
+  .ins:hover a{
+   color: #000;
+  }
+  
+  .dropdown-content {
+            display:none;
+            position: absolute;
+            margin-left:75%;
+            margin-top: 1%;
+            background-color: white;
+            width: 320px;
+            height: auto;
+            border:4px;
+            border-radius: 4px;
+            padding: 10px;
+            font-family: sans-serif;
+            font-size: 15px;
+            box-shadow: 0px 8px 10px 0px rgba(0,0,1,1);
+            z-index: 1;
+            overflow: auto;
+          }
+          .dropdown-content p:hover {background-color: #e3f6f5}
+          .show {display:block;}
+          
+              .block{
+                  display: none;
+              }
+  
+  
+  .footer{
+    position:absolute;
+    top:797px;
+    left: -4px;
+    width: 1381px;
+    background-color: black;
+    color: white;
+    text-align: center; 
+     font-size: 18px;
+     font-family: 'Raleway', sans-serif;
+  }
+  
+
+.components                                            /*      fieldset position  */
+{   
+    
+    border-radius: 5px;
+    margin-left:50px;
+    margin-top:10px;
+    width:1000px;
+    height:auto;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+
+/* working area  */
+
+#mid {
+   
+    margin-top:1rem;
+    margin-left:-15rem;
+    align-items: center;
+    display: inline-block;
+    height: 500px;
+    width: 900px;
+    box-shadow: 2px 4px 6px #262626;
+    border-radius: 4px;
+    background-image: url('../images/bg.jpg');
+}
+
+/* star */
+#starImg
+{
+  cursor: pointer;
+}
+#PC1
+{
+  position:absolute;
+  top:160px;
+  left:300px;
+ 
+ 
+  visibility:hidden;
+}
+
+
+#PC2
+{
+  position:absolute;
+  top:160px;
+  left:700px;
+ 
+  visibility:hidden;
+}
+
+#PC3
+{
+  position:absolute;
+  top:520px;
+  left:300px;
+ 
+ 
+  visibility:hidden;
+}
+
+#PC4
+{
+  position:absolute;
+  top:520px;
+  left:700px;
+ 
+  visibility:hidden;
+}
+
+#LP1
+{
+  position:absolute;
+  top:160px;
+  left:300px;
+   visibility:hidden;
+}
+
+
+#LP2
+{
+  position:absolute;
+  top:160px;
+  left:700px;
+ 
+  visibility:hidden;
+}
+
+#LP3
+{
+  position:absolute;
+  top:520px;
+  left:300px;
+ 
+ 
+  visibility:hidden;
+}
+
+#LP4
+{
+  position:absolute;
+  top:520px;
+  left:700px;
+ 
+  visibility:hidden;
+}
+
+#HUB1
+{
+  position:absolute;
+  top:320px;
+  left:500px;
+  visibility:hidden;
+}
+
+#SWITCH1
+{
+  position:absolute;
+  top:320px;
+  left:500px;
+  visibility:hidden;
+}
+
+/* RING */
+#ringImg
+{
+  cursor: pointer;
+}
+
+#ringImg:hover {opacity: 0.8;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+#PCR1
+{
+  position:absolute;
+  top:150px;
+  left:200px;
+  visibility:hidden;
+}
+
+
+#PCR2
+{
+  position:absolute;
+  top:150px;
+  left:800px;
+  visibility:hidden;
+}
+
+#PCR3
+{
+  position:absolute;
+  top:500px;
+  left:800px;
+  visibility:hidden;
+}
+
+#PCR4
+{
+  position:absolute;
+  top:500px;
+  left:200px;
+   visibility:hidden;
+}
+
+#LPR1
+{
+  position:absolute;
+  top:150px;
+  left:200px;
+  visibility:hidden;
+}
+
+
+#LPR2
+{
+  position:absolute;
+  top:150px;
+  left:800px;
+  visibility:hidden;
+}
+
+#LPR3
+{
+  position:absolute;
+  top:500px;
+  left:800px;
+  visibility:hidden;
+}
+
+#LPR4
+{
+  position:absolute;
+  top:500px;
+  left:200px;
+   visibility:hidden;
+}
+
+#HUBR1
+{
+  position:absolute;
+  top:240px;
+  left:380px;  
+  visibility:hidden;
+}
+
+#HUBR2
+{
+  position:absolute;
+  top:240px;
+  left:600px;  
+  visibility:hidden;
+}
+
+#HUBR3
+{
+  position:absolute;
+  top:420px;
+  left:600px; 
+  visibility:hidden;
+}
+
+#HUBR4
+{
+  position:absolute;
+  top:420px;
+  left:380px;
+  visibility:hidden;
+}
+
+#SWITCHR1
+{
+  position:absolute;
+  top:240px;
+  left:380px;  
+  visibility:hidden;
+}
+
+#SWITCHR2
+{
+  position:absolute;
+  top:240px;
+  left:600px;  
+  visibility:hidden;
+}
+
+#SWITCHR3
+{
+  position:absolute;
+  top:420px;
+  left:600px; 
+  visibility:hidden;
+}
+
+#SWITCHR4
+{
+  position:absolute;
+  top:420px;
+  left:380px;
+  visibility:hidden;
+}
+
+
+
+/* Bus */
+#busImg
+{
+  cursor: pointer;
+}
+
+#CAB
+{
+  position:absolute;
+  top:360px;
+  left:220px;
+  visibility:hidden;
+}
+
+#PCB1
+{
+  position:absolute;
+  top:160px;
+  left:290px;
+  visibility:hidden;
+}
+
+#PCB2
+{
+  position:absolute;
+  top:160px;
+  left:582px;
+  visibility:hidden;
+}
+
+#PCB3
+{
+  position:absolute;
+  top:500px;
+  left:440px;
+  visibility:hidden;
+}
+
+#PCB4
+{
+  position:absolute;
+  top:500px;
+  left:710px;
+  visibility:hidden;
+}
+#LPB1
+{
+  position:absolute;
+  top:160px;
+  left:290px;
+  visibility:hidden;
+}
+
+#LPB2
+{
+  position:absolute;
+  top:160px;
+  left:582px;
+  visibility:hidden;
+}
+
+#LPB3
+{
+  position:absolute;
+  top:500px;
+  left:440px;
+  visibility:hidden;
+}
+
+#LPB4
+{
+  position:absolute;
+  top:500px;
+  left:710px;
+  visibility:hidden;
+}
+
+#TER1
+{
+  position:absolute;
+  top:342px;
+  left:205px;
+  visibility:hidden;
+}
+
+#TER2
+{
+  position:absolute;
+  top:342px;
+  left:900px;
+  visibility:hidden;
+}
+
+/*mesh*/
+
+#PCM1
+{
+  position:absolute;
+  top:150px;
+  left:200px;
+  visibility:hidden;
+}
+
+
+#PCM2
+{
+  position:absolute;
+  top:150px;
+  left:800px;
+  visibility:hidden;
+}
+
+#PCM3
+{
+  position:absolute;
+  top:500px;
+  left:800px;
+  visibility:hidden;
+}
+
+#PCM4
+{
+  position:absolute;
+  top:500px;
+  left:200px;
+   visibility:hidden;
+}
+
+#LPM1
+{
+  position:absolute;
+  top:150px;
+  left:200px;
+  visibility:hidden;
+}
+
+
+#LPM2
+{
+  position:absolute;
+  top:150px;
+  left:800px;
+  visibility:hidden;
+}
+
+#LPM3
+{
+  position:absolute;
+  top:500px;
+  left:800px;
+  visibility:hidden;
+}
+
+#LPM4
+{
+  position:absolute;
+  top:500px;
+  left:200px;
+   visibility:hidden;
+}
+
+#HUBM1
+{
+  position:absolute;
+  top:240px;
+  left:380px;  
+  visibility:hidden;
+}
+
+#HUBM2
+{
+  position:absolute;
+  top:240px;
+  left:600px;  
+  visibility:hidden;
+}
+
+#HUBM3
+{
+  position:absolute;
+  top:420px;
+  left:600px; 
+  visibility:hidden;
+}
+
+#HUBM4
+{
+  position:absolute;
+  top:420px;
+  left:380px;
+  visibility:hidden;
+}
+
+#SWITCHM1
+{
+  position:absolute;
+  top:240px;
+  left:380px;  
+  visibility:hidden;
+}
+
+#SWITCHM2
+{
+  position:absolute;
+  top:240px;
+  left:600px;  
+  visibility:hidden;
+}
+
+#SWITCHM3
+{
+  position:absolute;
+  top:420px;
+  left:600px; 
+  visibility:hidden;
+}
+
+#SWITCHM4
+{
+  position:absolute;
+  top:420px;
+  left:380px;
+  visibility:hidden;
+}
+
+.position-absolute {
+  position: absolute !important;
+  backdrop-filter: blur(6px);
+}
+
+ 

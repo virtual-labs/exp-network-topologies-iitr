@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Network Topology: Ring</title>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.3/themes/base/jquery-ui.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/vlabs-style.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css">
+
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/ui/1.13.3/jquery-ui.min.js" integrity="sha256-36nO/v2OKdYbFSjDD2I2O3Td4tVhw6JqR22nS4kPwoY=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jsPlumb/2.15.6/js/jsplumb.min.js" integrity="sha512-yGgPLFnBGQP4L4+2eTbGj0uLoq+CLXmP2+c/hXWdmLYB9jEBfVGjxIqtvFneLCKATOZhDf2YPYG4uSEksWXp+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body onload="initialise()">
+  <div class="box" style="position: absolute;">
+    <section class="content">
+      <br>
+      <section class="content-header">
+        <div id="con">
+          <h3 id="con-head" align="center" style="color: #272343; font-family: 'Raleway', sans-serif;">Network Topology: Ring</h3>
+        </div>
+      </section>
+      <br>
+    </section>
+
+    <div>
+      <label for="dropdown"><b>Choose the Network you would like to implement:</b></label>
+      <select id="dropdown" onchange="redirect();">
+        <option value="star">Star Topology</option>
+        <option value="bus">Bus Topology</option>
+        <option value="ring" selected>Ring Topology</option>
+        <option value="mesh">Mesh Topology</option>
+        <option value="hybrid">Hybrid Topology</option>
+      </select>
+    </div>
+
+    <button type="button" class="ins" onclick="myFunction()">INSTRUCTIONS</button>
+    <div id="myDropdown" class="dropdown-content">
+      <p style="text-align: justify; line-height: 1.4">
+        <b>To perform the simulation, follow the below given steps:</b><br>
+        <b>1.</b> Click on either PC or laptop (present at the bottom) to place the device on the working area.<br>
+        <b>2.</b> Now click on either switch or hub.<br>
+        <b>3.</b> Now create a communication link as shown in Fig. 1 (click on the image for a better view).<br>
+        &nbsp;&nbsp;<b>3.1.</b> Connect each pair of end devices with its corresponding intermediate device, e.g., PC1 with Hub1, PC2 with Hub2, and so on.<br>
+        &nbsp;&nbsp;<b>3.2.</b> Next, connect switches/hubs together, e.g., Hub1 with Hub2, Hub2 with Hub3, and so on.<br>
+        <b>NOTE: </b> Click a device port and drag and drop it to another device port to connect.<br>
+      </p>
+      <center>
+        <img id="ringImg" style="width: 180px; height: 118px" title="click on image" alt="Reference image for ring topology. Use any device like PC with a Switch, Laptop with a Hub, etc." src="images/ring.png"><br>
+        <b>Fig. 1 Reference image for ring topology</b>
+      </center>
+      <p style="text-align: justify; line-height: 1.4">
+        <b>4.</b> Once the topology is constructed, click on the check button to verify if the constructed topology is built correctly or not.<br>
+      </p>
+    </div>
+
+    <div id="mid">
+      <div id="PCR1"><img src="images/computer.png" id="comp1" width="100" height="100" alt="PC-1">
+        <label style="font-size: 15px; color: blue; position: absolute; top: 85px; left: 33px;"><b>PC-1</b></label></div>
+      <div id="PCR2"><img src="images/computer.png" id="comp2" width="100" height="100" alt="PC-2">
+        <label style="font-size: 15px; color: blue; position: absolute; top: 85px; left: 33px;"><b>PC-2</b></label></div>
+      <div id="PCR3"><img src="images/computer.png" id="comp3" width="100" height="100" alt="PC-3">
+        <label style="font-size: 15px; color: blue; position: absolute; top: 85px; left: 33px;"><b>PC-3</b></label></div>
+      <div id="PCR4"><img src="images/computer.png" id="comp4" width="100" height="100" alt="PC-4">
+        <label style="font-size: 15px; color: blue; position: absolute; top: 85px; left: 33px;"><b>PC-4</b></label></div>
+
+      <div id="LPR1"><img src="images/laptop.png" id="lap1" width="100" height="86" alt="Laptop-1">
+        <label style="font-size: 15px; color: blue; position: absolute; top: 85px; left: 15px;"><b>Laptop-1</b></label></div>
+      <div id="LPR2"><img src="images/laptop.png" id="lap2" width="100" height="86" alt="Laptop-2">
+        <label style="font-size: 15px; color: blue; position: absolute; top: 85px; left: 15px;"><b>Laptop-2</b></label></div>
+      <div id="LPR3"><img src="images/laptop.png" id="lap3" width="100" height="86" alt="Laptop-3">
+        <label style="font-size: 15px; color: blue; position: absolute; top: 85px; left: 15px;"><b>Laptop-3</b></label></div>
+      <div id="LPR4"><img src="images/laptop.png" id="lap4" width="100" height="86" alt="Laptop-4">
+        <label style="font-size: 15px; color: blue; position: absolute; top: 85px; left: 15px;"><b>Laptop-4</b></label></div>
+
+      <div id="HUBR1"><img src="images/iswitch.png" id="hub1" width="100" height="75" alt="Hub-1">
+        <label style="font-size: 15px; color: red; position: absolute; top: 0px; left: 30px;"><b>HUB-1</b></label></div>
+      <div id="HUBR2"><img src="images/iswitch.png" id="hub2" width="100" height="75" alt="Hub-2">
+        <label style="font-size: 15px; color: red; position: absolute; top: 0px; left: 30px;"><b>HUB-2</b></label></div>
+      <div id="HUBR3"><img src="images/iswitch.png" id="hub3" width="100" height="75" alt="Hub-3">
+        <label style="font-size: 15px; color: red; position: absolute; top: 60px; left: 30px;"><b>HUB-3</b></label></div>
+      <div id="HUBR4"><img src="images/iswitch.png" id="hub4" width="100" height="75" alt="Hub-4">
+        <label style="font-size: 15px; color: red; position: absolute; top: 60px; left: 30px;"><b>HUB-4</b></label></div>
+
+      <div id="SWITCHR1"><img src="images/iswitch1.png" id="switch1" width="100" height="75" alt="Switch-1">
+        <label style="font-size: 15px; color: red; position: absolute; top: 0px; left: 17px;"><b>SWITCH-1</b></label></div>
+      <div id="SWITCHR2"><img src="images/iswitch1.png" id="switch2" width="100" height="75" alt="Switch-2">
+        <label style="font-size: 15px; color: red; position: absolute; top: 0px; left: 17px;"><b>SWITCH-2</b></label></div>
+      <div id="SWITCHR3"><img src="images/iswitch1.png" id="switch3" width="100" height="75" alt="Switch-3">
+        <label style="font-size: 15px; color: red; position: absolute; top: 55px; left: 15px;"><b>SWITCH-3</b></label></div>
+      <div id="SWITCHR4"><img src="images/iswitch1.png" id="switch4" width="100" height="75" alt="Switch-4">
+        <label style="font-size: 15px; color: red; position: absolute; top: 55px; left: 15px;"><b>SWITCH-4</b></label></div>
+    </div>
+
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01" alt="Modal Image">
+      <div id="caption"></div>
+    </div>
+
+    <script>
+      // Modal functionality
+      var modal = document.getElementById("myModal");
+      var img = document.getElementById("ringImg");
+      var modalImg = document.getElementById("img01");
+      var captionText = document.getElementById("caption");
+      img.onclick = function() {
+        modal.style.display = "block";
+        modalImg.src = this.src;
+        captionText.innerHTML = this.alt;
+      }
+      var span = document.getElementsByClassName("close")[0];
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+    </script>
+
+    <fieldset class="components" id="Components">
+      <div class="item"><img id="com" width="100" height="100" class="image" src="images/computer.png" onclick="imgDraw('com')" alt="PC"><span class="caption">PC</span></div>
+      <div class="item"><img id="lap" width="100" height="86" class="image" src="images/laptop.png" onclick="imgDraw('lap')" alt="Laptop"><span class="caption">Laptop</span></div>
+      <div class="item"><img id="iswitch" width="100" height="75" class="image" src="images/iswitch.png" onclick="imgDraw('iswitch')" alt="Hub"><span class="caption">Hub</span></div>
+      <div class="item"><img id="iswitch1" width="100" height="100" class="image" src="images/iswitch1.png" onclick="imgDraw('iswitch1')" alt="Switch"><span class="caption">Switch</span></div>
+      <div class="item"><img id="ireset" width="108" height="100" class="image" src="images/ree.png" onclick="reset()" alt="Reset"><span class="caption">Reset</span></div>
+      <div class="item"><img id="ievaluate" width="100" height="100" class="image" src="images/ev.png" onclick="evaltop()" alt="Check"><span class="caption">Check</span></div>
+    </fieldset>
+
+    <div class="footer">
+      &copy; 2024 Virtual Labs, IIT Roorkee
+    </div>
+
+    <script src="js/ring.js"></script>
+    <script>
+      function myFunction() {
+        console.log("check");
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      function newPopup(url) {
+        window.open(url, 'popUpWindow', 'height=500,width=400,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=no,menubar=no,location=no,directories=no,status=yes');
+      }
+
+      function newPopup1(url) {
+        window.open(url, 'popUpWindow1', 'height=750,width=1300,left=10,top=10,resizable=yes,scrollbars=yes,toolbar=no,menubar=no,location=no,directories=no,status=yes');
+      }
+    </script>
+
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script>
+      tippy('#mid', {
+        content: "Working Area",
+        placement: 'left-start',
+      });
+      tippy('#com', {
+        content: "PC",
+        followCursor: true,
+      });
+      tippy('#lap', {
+        content: "LAPTOP",
+        followCursor: true,
+      });
+      tippy('#iswitch', {
+        content: "HUB",
+        followCursor: true,
+      });
+      tippy('#iswitch1', {
+        content: "SWITCH",
+        followCursor: true,
+      });
+      tippy('#ireset', {
+        content: "RESET",
+        followCursor: true,
+      });
+      tippy('#ievaluate', {
+        content: "CHECK",
+        placement: 'right-end',
+        followCursor: true,
+      });
+    </script>
+  </div>
+</body>
+</html>
