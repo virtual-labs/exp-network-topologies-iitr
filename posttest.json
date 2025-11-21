@@ -1,0 +1,110 @@
+[
+  {
+        "question": "Bus, ring and star topologies are mostly used in the __________.",
+        "answers": {
+          "a": "LAN",
+          "b": "MAN",
+          "c": "WAN",
+          "d": "Inter-network"
+        },
+        "correctAnswer": "a"
+      },
+      {
+     
+        "question": "In Peer to peer network topology it is not necessary that all PCs should be connected in a network.",
+        "answers": {
+          "a": "True",
+          "b": "False"
+        },
+        "correctAnswer": "b"
+      },
+      {
+
+        "question": "Physical or logical arrangement of network is:",
+        "answers": {
+          "a": "Topology",
+          "b": "Routing",
+          "c": "Networking",
+          "d": "None of the mentioned"
+        },
+        "correctAnswer": "a"
+      },
+      {
+      
+        "question": "Combination of two or more topologies are called:",
+        "answers": {
+          "a": "Star Topology",
+          "b": "Bus Topology",
+          "c": "Ring topology",
+          "d": "Hybrid Topology"
+        },
+        "correctAnswer": "d"
+      },
+      {
+    
+        "question": "In mesh topology, devices are connected via:",
+        "answers": {
+          "a": "Multipoint link",
+          "b": "Point to point link",
+          "c": "No Link",
+          "d": "None of the above"
+        },
+        "correctAnswer": "b"
+      },
+      {
+     
+        "question": "A topology that is responsible for describing the geometric arrangement of components that make up the LAN.",
+        "answers": {
+          "a": "Complex",
+          "b": "Physical",
+          "c": "Logical",
+          "d": "Incremental"
+        },
+        "correctAnswer": "b"
+      },
+      {
+    
+        "question": "Which LAN topology describes the possible connections between pairs of networked end-points that can communicate?",
+        "answers": {
+          "a": "Complex",
+          "b": "Physical",
+          "c": "Logical",
+          "d": "Inter-network"
+        },
+        "correctAnswer": "c"
+      },
+      {
+      
+        "question": "A _________ is set of devices connected by media links.",
+        "answers": {
+          "a": "Network",
+          "b": "Nodes",
+          "c": "Transmission medium",
+          "d": "All of the above"
+        },
+        "correctAnswer": "a"
+      },
+      {
+        
+        "question": "Multipoint topology is:",
+        "answers": {
+          "a": "Bus",
+          "b": "Star",
+          "c": "Mesh",
+          "d": "Ring"
+        },
+        "correctAnswer": "a"
+      },
+      {
+       
+        "question": "Bus topology is also known as line topology or backbone.",
+        "answers": {
+          "a": "True",
+          "b": "False"
+        },
+        "correctAnswer": "a"
+      }
+    ]
+  
+
+

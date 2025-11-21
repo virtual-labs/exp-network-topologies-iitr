@@ -1,0 +1,608 @@
+<!DOCTYPE html><html lang="en"><head>
+      <!--Google Tag Manager-->
+      <script class="gtm">
+        var dataLayer = [{
+        'labName': 'Virtual Lab',
+        'discipline': 'Test',
+        'college': 'IITR',
+        'phase': 'Testing',
+        'expName': 'IMPLEMENTATION OF DIFFERENT NETWORK TOPOLOGIES',
+        'expShortName': 'network-topologies'
+        }];
+    
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&amp;l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-5NMQ9NQ');
+      </script>
+      <!--End Google Tag Manager-->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="" name="description">
+    <meta content="" name="author">
+    
+    	<meta name="experiment-short-name" content="network-topologies">
+    	<meta name="developer-institute" content="IITR">
+    	<meta name="learning-unit" content="IMPLEMENTATION OF DIFFERENT NETWORK TOPOLOGIES">
+    	<meta name="task-name" content="Theory">
+    
+    <!-- For iPhone -->
+    <meta name="msapplication-TileColor" content="#4076e0">
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#4076e0">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#4076e0">
+    <title>Virtual Labs</title>
+    <link rel="shortcut icon" href="./assets/images/favicon.ico">
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/4.0.0/github-markdown.min.css" integrity="sha512-Oy18vBnbSJkXTndr2n6lDMO5NN31UljR8e/ICzVPrGpSud4Gkckb8yUpqhKuUNoE+o9gAb4O/rAxxw1ojyUVzg==" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Raleway&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./assets/css/github-markdown.min.css">
+    <link rel="stylesheet" href="./assets/css/vlabs-style.css">
+    <link rel="stylesheet" href="./assets/css/toast.css">
+    <link rel="stylesheet" href="./assets/katex_assets/katex.min.css">
+    
+    <script src="./assets/js/jquery-3.4.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <style>
+      h1 {
+      font-size: 1.8rem;
+      }
+      h2 {
+      font-size: 1.4rem;
+      }
+      h3 {
+      font-size: 1.2rem;
+      }
+
+      h2, h3 {
+      font-weight: 800;
+      }
+    </style>
+    
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"></head>
+  <body class="p-0 container-fluid vlabs-page d-flex flex-column justify-content-between">
+      <!--Google Tag Manager (noscript)-->
+      <noscript class="gtm">
+        <iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-5NMQ9NQ" style="display:none;visibility:hidden" width="0">
+        </iframe>
+      </noscript>
+      <!--End Google Tag Manager (noscript)-->
+  
+      <header class="vlabs-header sticky-top bg-white">
+        <nav class="p-0 navbar navbar-light d-flex align-items-stretch">
+          
+          <button class="navbar-toggler px-4" type="button" onclick="toggle()">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+      
+          <div class="d-flex justify-content-center">        
+            <a href="https://vlab.co.in" class="navbar-brand">
+              <img src="./assets/images/vlabs-color-small-moe.jpg" alt="vlabs logo" class="vlabs-logo">
+            </a>
+          </div>
+          
+          <div id="headerNavbar" class="d-none border-top flex-grow-1 d-lg-flex align-items-center justify-content-end">
+            <div class="svc-rating-display">
+                <rating-display spreadsheetid="1x12nhpp0QvnsA6x-O1sV4IA9SAbfVsq_wiexWkutOmU" sheetname="Experiment-Database" columnname="Experiment Short Name" columnvalue="network-topologies" imagesdirectory="/plugins/svc-rating/images/">
+                </rating-display>
+            </div>      <div class="svc-rating-submit">
+                <rating-submit title="Rate" this="" experiment="">
+                </rating-submit>
+            </div>      <bug-report id="bug-report" title="[BUG REPORT] IMPLEMENTATION OF DIFFERENT NETWORK TOPOLOGIES" page-type="text" context-info="{&quot;organisation&quot;:&quot;Virtual Labs&quot;,&quot;developer_institute&quot;:&quot;IITR&quot;,&quot;expname&quot;:&quot;IMPLEMENTATION OF DIFFERENT NETWORK TOPOLOGIES&quot;,&quot;labname&quot;:&quot;Virtual Lab&quot;,&quot;phase&quot;:&quot;Testing&quot;}" checkbox-json="{&quot;text&quot;:[&quot;Insufficient Content&quot;],&quot;video&quot;:[&quot;Insufficient Content&quot;],&quot;assesment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;assessment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;simulation&quot;:[&quot;Simulation Not Working&quot;,&quot;Incorrect Results/Observations&quot;,&quot;Insufficient/Incorrect Instructions&quot;],&quot;DEFAULT&quot;:[&quot;Page Not Loading&quot;,&quot;Content Not Visible&quot;,&quot;Incorrect Content&quot;]}" button_style="border: none; color: #fff; background-color: #288ec8; text-align: center; font-size: 1.05rem; border-radius: 1em;padding: 0.6em 1.2em; margin: 0 10px" position="override" custom_button_class="v-button"></bug-report>
+          </div>
+        </nav>
+      </header>
+      <div class="container-fluid flex-fill d-flex flex-column vlabs-page-main">
+        <div class="row d-flex justify-content-between">
+          <div class="flex-column">
+          <div class="row py-4 px-4 breadcrumbs">
+          	<div class="title is-4 tools">Tools</div>
+          	<span class="mx-2">
+          		<i aria-hidden="true" class="fa fa-angle-right"></i>
+          	</span>
+          	<a href="performance-report.html" class="my-2 mx-3" target="_blank">
+          		<button class="v-button">Performance Tool</button>
+          	</a>
+          	<a href="validator-report.html" class="my-2 mx-3" target="_blank">
+          		<button class="v-button">Validation Tool</button>
+          	</a>
+          </div>
+          </div>
+        </div>
+        <div class="row flex-grow-1 d-flex flex-nowrap flex-column flex-lg-row">
+          <div class="modal fade popupmenu" id="popupMenu" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+                  <div class="modal-content">
+                      <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLabel">
+                              <a href="https://vlab.co.in" class="navbar-brand">
+                                  <img src="./assets/images/vlabs-color-small-moe.jpg" alt="vlabs logo" class="vlabs-logo">
+                              </a>
+                          </h5>
+                          <button type="button" class="btn-close align-self-center" data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="modal-body nav-menu">
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="index.html" class="p-2 ">
+                                      Aim
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="theory.html" class="p-2  current-item ">
+                                      Theory
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="pretest.html" class="p-2 ">
+                                      Pretest
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="procedure.html" class="p-2 ">
+                                      Procedure
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="simulation.html" class="p-2 ">
+                                      Simulation
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="posttest.html" class="p-2 ">
+                                      Posttest
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="references.html" class="p-2 ">
+                                      References
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="contributors.html" class="p-2 ">
+                                      Contributors
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                              <div>
+                                  <div class="d-flex nav-menu-body">
+                                      <a href="feedback.html" class="p-2 ">
+                                      Feedback
+                                      </a>
+                                      
+                                  </div>
+                                  <div id="t-" class="collapse">
+                                      <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                                      </div>
+                                  </div>
+                              </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+          <div class="nav flex-column sidebar nav-menu flex-shrink-0 px-lg-4 align-items-center align-items-lg-start hidden d-none d-lg-flex" id="menu">
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="index.html" class="p-2 ">
+                        Aim
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="theory.html" class="p-2  current-item ">
+                        Theory
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="pretest.html" class="p-2 ">
+                        Pretest
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="procedure.html" class="p-2 ">
+                        Procedure
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="simulation.html" class="p-2 ">
+                        Simulation
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="posttest.html" class="p-2 ">
+                        Posttest
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="references.html" class="p-2 ">
+                        References
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="contributors.html" class="p-2 ">
+                        Contributors
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="d-flex nav-menu-body">
+                        <a href="feedback.html" class="p-2 ">
+                        Feedback
+                        </a>
+                        
+                    </div>
+                    <div id="t-" class="collapse">
+                        <div class="px-3 d-flex flex-column tasks align-items-center align-items-lg-start">
+                        </div>
+                    </div>
+                </div>
+          </div>          <div class="vlabs-page-content px-5 pb-4 flex-grow-1 markdown-body">
+            <div class="text-center fix-spacing">
+              <h2 id="implementation-of-different-network-topologies">Implementation of Different Network Topologies</h2>
+          
+            </div>
+              <h3 id="introduction"><strong>Introduction</strong></h3>
+          <p>In the present scenario, networking plays a crucial role in every individual’s and every organization’s day-to-day activities. But there has to be some specific models or guidelines that must be followed to connect one device to another. This logical or physical layout or configuration of a network is known as a network topology.
+          s
+          <strong>Definition:</strong>
+          A network topology is a substantial arrangement of a network in which all the nodes are connected with each other using network links or connecting lines. Apart from just describing how the nodes are interconnected, network topology also explains how the data is transferred in a network.</p>
+          <h3 id="logical-and-physical-network-topologies"><strong>Logical and Physical Network Topologies:</strong></h3>
+          <p>A logical network topology is a high-level representation of how two or more nodes are connected. A logical network topology describes or explains how signals act on a network and how the data is transmitted from one node to another at a very high level. On the other hand, a physical topology describes how nodes are physically connected to each other. The physical connection can be made using wires, wireless connectivity, networking components, and more.</p>
+          <h4 id="importance-of-network-topologies"><strong>Importance of Network Topologies:</strong></h4>
+             <ol>
+              <li>Plays a significant role in the functioning of networks.</li>
+              <li>Helps us better understand the networking concepts.</li>
+              <li>Plays a crucial role in performance.</li>
+              <li>Helps reduce the operational and maintenance costs such as cabling costs.</li>
+              <li>A network topology is a factor in determining the media type to be used to cable a network.</li>
+              <li>Error or fault detection is made easy using network topologies.</li>
+              <li>Effective utilization of resources and networking components.</li>
+             </ol>
+          
+          <h4 id="links"><strong>Links</strong></h4>
+          <p>A link is a communications channel that transfers data from one device to another.</p>
+          <ol>
+          <li>
+          Point-to-Point: A point-to-point connection provides a dedicated link between two devices.
+          
+          <center>  
+          <img style="mix-blend-mode: darken;" src="images\p2p.png" alt="Point-to-Point Link">
+          <figcaption><strong>Fig 1: Point-to-Point Link</strong></figcaption><br>
+          </center>
+          </li>
+          
+          <li>
+          Multipoint network (also called broadcast): the communication channel is shared by all the machines on the network; packets sent by any machine are received by all the others.
+          <center>  
+          <img style="mix-blend-mode: darken;" src="images\multipoint.png" alt="Multipoint Link">
+          <figcaption><strong>Fig 2: Multipoint Link</strong></figcaption><br>
+          </center>
+          </li>
+          </ol>
+          
+          <h3 id="network-topology-classification"><strong>Network Topology Classification:</strong></h3>
+          <p>Both physical and logical network topologies can be broadly classified into five basic types - Star, Bus, Ring, Mesh and Hybrid.</p>
+          <center>  
+          <img style="mix-blend-mode: darken;" src="images\topologies.png" alt="Network Topology Classification">
+          <figcaption><strong>Fig 3: Network Topology Classification</strong></figcaption><br>
+          </center>
+          
+          <h4 id="1-star-topology"><strong>1. Star Topology</strong></h4>
+          <p>In a star topology, each device has a dedicated point-to-point link only to a central controller, usually called a hub/switch. All the data in a star topology flow through the central node before it reaches its destination. The central node manages and controls all data transfers and connectivity in a star topology. The central hub also acts as a repeater to make sure there is zero or minimal data loss during the transmissions. A star topology can be configured using a twisted pair, coaxial cable, or an optical fiber. There technically is no limit to how many computers can connect in a star topology. However, network performance can decrease as more computers are connected, resulting in slower network speeds.</p>
+          <center>  
+          <img style="mix-blend-mode: darken;" src="images\star.png" alt="Star Topology with 4 Nodes">
+          <figcaption><strong>Fig 4: Star Topology with 4 Nodes</strong></figcaption><br>
+          </center>
+          
+          <p><strong>Advantages of Star Topology:</strong></p>
+          <ul>
+              <li>If N devices are connected to each other in a star topology, then the number of cables required to connect them is N. So, it is easy to set up.</li>
+              <li>Each device requires just one port i.e. to attach to the central node.</li>
+              <li>Failure of one node will not affect the entire network.</li>
+              <li>Devices can be added, removed, reconfigured, or modified without disturbing the network.</li>
+              <li>Less cabling is needed to configure star topology.</li>
+              <li>Easy to troubleshoot.</li>
+          </ul>
+          
+          <p><strong>Disadvantages of Star Topology:</strong></p>
+          <ul>
+              <li>The entire network is dependent on the central node: If the node fails, then the whole network will be down.</li>
+              <li>Expensive to install and use.</li>
+              <li>Performance is solely based on the central node's configuration, power, and efficiency.</li>
+          </ul>
+          
+          <h4 id="2-bus-topology"><strong>2. Bus Topology</strong></h4>
+          <p>us topology refers to a network setup where nodes or devices are interconnected using a single cable. It is because of this setup why bus topology is often referred to as line topology or backbone.
+          Bus topology usually consists of two ends and signals travel from one end to another. Bus topology is unidirectional and data is transferred from one end to another in a single direction. Nodes are connected to the bus cable by drop lines and taps. A drop line is a connection running between the device and the main cable. A tap is a connector.
+          <strong>NOTE:</strong> If N devices are connected to each other in a bus topology, then the number of cables required to connect them is 1, known as backbone cable, and N drop lines are required.</p>
+          <center>  
+          <img style="mix-blend-mode: darken;" src="images\bus.png" alt="Bus Topology with 4 Nodes">
+          <figcaption><strong>Fig 5: Bus Topology with 4 Nodes</strong></figcaption><br>
+          </center>
+          
+          
+          <p><strong>Advantages of Bus Topology:</strong></p>
+          <ul>
+              <li>Cost-effective.</li>
+              <li>Less cable required to connect the nodes.</li>
+              <li>Very easy to understand.</li>
+              <li>Provides an easy feasibility to extend or to reduce a network</li>
+              <li>Terminators are required for both ends of the main cable.</li>
+          </ul>
+          
+          <p><strong>Disadvantages of Bus Topology:</strong></p>
+          <ul>
+              <li>Ideal only for small network setups.</li>
+              <li>If the backbone (primary) cable fails, the entire network fails.</li>
+              <li>Unidirectional.</li>
+              <li>Transmission speeds are drastically reduced with the increased number of nodes.</li>
+          </ul>
+          
+          <h4 id="3-ring-topology"><strong>3. Ring Topology</strong></h4>
+          <p>In a ring topology, all devices are connected in a closed path configuration and one node in the network acts as a monitor, which essentially takes care of the configuration. This closed path can be in any form like circle, triangle, square or whatever else. In a ring topology, all the data packets are transmitted from one node to another in a circular manner and, therefore, for a data packet to reach one point to another it has to traverse through all the intermediate nodes. For large networks with more nodes connected in a ring, repeaters can be used to prevent data loss in these data transmissions.</p>
+          <center>  
+          <img style="mix-blend-mode: darken;" src="images\ring.png" alt="Ring Topology with 4 Nodes">
+          <figcaption><strong>Fig 6: Ring Topology with 4 Nodes</strong></figcaption><br>
+          </center>
+          
+          <p><strong>Advantages of Ring Topology:</strong></p>
+          <ul>
+              <li>Performs better than bus topology under heavy network loads.</li>
+              <li>Point-to-point connectivity of the nodes makes it easy to identify and detect misconfigurations or faults.</li>
+              <li>Orderly network flow.</li>
+              <li>Cost effective to implement.</li>
+          </ul>
+          
+          <p><strong>Disadvantages of Ring Topology:</strong></p>
+          <ul>
+              <li>One malfunctioning node can collapse the whole network.</li>
+              <li>Transmission line failure can take down the whole network.</li>
+              <li>Communication delay is proportional to the number of nodes in a ring.</li>
+              <li>Bandwidth is shared among all the devices in a network.</li>
+              <li>Reconfiguring, adding, or removing nodes requires the network to shut down.</li>
+          </ul>
+          
+          <h4 id="4-mesh-topology"><strong>4. Mesh Topology</strong></h4>
+          <p>Mesh topology is a widely used network model that has a point-to-point connection between each node in the network. Every node or a device in a mesh network connects to other nodes directly and in a non-hierarchical manner. In a mesh network, the network isn’t dependent on a single machine like the star topology and every node plays an active role in the relay of information.
+          Data transmission in a mesh topology is based on two important techniques:</p>
+             <ol>
+              <li>Routing: Every node in a mesh network can have a routing logic and transmission of data or information happens through that routing logic. This routing logic can be used to find the shortest distance to send some information from sender to receiver or the logic can be used to avoid using broken lines for data transmission.</li>
+              <li>Flooding: In the case of flooding, the same data is transmitted to each node in the network. Therefore, no routing logic is required in case of flooding mesh networks. Loss of data is highly unlikely as every node will have the same data with them. This makes it robust and fault-tolerant. However, this also increases the load on the network.</li>
+             </ol>
+          
+          <center>  
+          <img style="mix-blend-mode: darken;" src="images\mesh.png" alt="Mesh Topology with 5 Nodes">
+          <figcaption><strong>Fig 7: Mesh Topology with 5 Nodes</strong></figcaption><br>
+          </center>
+          
+          <p><strong>Advantages of Mesh Topology:</strong></p>
+          <ul>
+              <li>Fully connected</li>
+              <li>Robust</li>
+              <li>Provides security and privacy.</li>
+              <li>Any node failure won’t affect the network.</li>
+              <li>Less load and collisions to dedicated lines.</li>
+              <li>Isolation and fault-detection are easy.</li>
+          </ul>
+          
+          <p><strong>Disadvantages of Mesh Topology:</strong></p>
+          <ul>
+              <li>Cost of implementing and cost of cabling is high.</li>
+              <li>Installation and reconfiguring is a typical task.</li>
+              <li>Complex to understand.</li>
+          </ul>
+          
+          <h4 id="5-hybrid-topology"><strong>5. Hybrid Topology</strong></h4>
+          <p>When a network topology is formed by integrating two or more topologies together, this results in a hybrid topology. Hybrid topologies can be configured as per the company’s requirement. When configured properly, hybrid topologies can provide the best of all the network topologies. Hybrid topologies are easy to scale and expand. However, they might need higher costs and more operational efforts to configure and maintain. </p>
+          <center>  
+          <img style="mix-blend-mode: darken;" src="images\hybrid.png" alt="Hybrid Topology">
+          <figcaption><strong>Fig 8: Hybrid Topology</strong></figcaption><br>
+          </center>
+          
+          <p><strong>Advantages of Hybrid Topology:</strong></p>
+          <ul>
+              <li>Reliable</li>
+              <li>Effective</li>
+              <li>Flexible</li>
+              <li>Scalablev
+          </li></ul>
+          
+          <p><strong>Disadvantages of Hybrid Topology:</strong></p>
+          <ul>
+              <li>Expensive to implement.</li>
+              <li>Higher Complexity.</li>
+          </ul>
+          
+          <h3 id="cables"><strong>Cables</strong></h3>
+          <p>A cable is a thick wire, or a group of wires inside a rubber or plastic covering, which is used to carry electricity or electronic signals. There are different types of cables used such as:- </p>
+          <ol>
+          <li>Cross Over Cable: An Ethernet crossover cable is a crossover cable for Ethernet used to connect computing devices together directly. It is most often used to connect two devices of the same type, e.g. two computers (via their network interface controllers) or two switches to each other.</li>
+          <li>Coaxial Cable: It is a type of electrical cable consisting of an inner conductor surrounded by a concentric conducting shield, with the two separated by a dielectric (insulating material). Many coaxial cables also have a protective outer sheath or jacket. The term 'coaxial' refers to the inner conductor and the outer shield sharing a geometric axis. Intentionally crossed wiring in the crossover cable connects the transmit signals at one end to the receive signals at the other end.</li>
+          <li>Fibre Optic Cable: It is, also known as an optical-fiber cable, is an assembly similar to an electrical cable, but containing one or more optical fibers that are used to carry light. The optical fiber elements are typically individually coated with plastic layers and contained in a protective tube suitable for the environment where the cable will be deployed. Different types of cable are used for different applications, for example, long distance telecommunication, or providing a high-speed data connection between different parts of a building.</li>
+          <li>Rollover Cable: It is (also known as a Yost cable, Cisco cable, or a Console cable) a type of null-modem cable that is often used to connect a computer terminal to a router's console port. This cable is typically flat (and has a light blue color) to help distinguish it from other types of network cabling.</li>
+          <li>Straight Cable:By contrast, patch cables or straight through cables are used to connect devices of different types, such as a computer to a network switch or Ethernet hub.</li>
+          </ol>
+          </div>
+          <div class="bug-report-mobile">
+              <bug-report id="bug-report" title="[BUG REPORT] IMPLEMENTATION OF DIFFERENT NETWORK TOPOLOGIES" page-type="text" context-info="{&quot;organisation&quot;:&quot;Virtual Labs&quot;,&quot;developer_institute&quot;:&quot;IITR&quot;,&quot;expname&quot;:&quot;IMPLEMENTATION OF DIFFERENT NETWORK TOPOLOGIES&quot;,&quot;labname&quot;:&quot;Virtual Lab&quot;,&quot;phase&quot;:&quot;Testing&quot;}" checkbox-json="{&quot;text&quot;:[&quot;Insufficient Content&quot;],&quot;video&quot;:[&quot;Insufficient Content&quot;],&quot;assesment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;assessment&quot;:[&quot;Incorrect Options&quot;,&quot;Incorrect Answer&quot;,&quot;Incorrect Question&quot;],&quot;simulation&quot;:[&quot;Simulation Not Working&quot;,&quot;Incorrect Results/Observations&quot;,&quot;Insufficient/Incorrect Instructions&quot;],&quot;DEFAULT&quot;:[&quot;Page Not Loading&quot;,&quot;Content Not Visible&quot;,&quot;Incorrect Content&quot;]}" position="override" button_style="
+                          position: fixed; 
+                          bottom: 20px;
+                          right: 20px;
+                          z-index: 1;
+                          font-size: 0;
+                          padding: 25px;
+                          border-radius: 50%;
+                          border: none;
+                          background-color: #0fc0ff;
+                          background-image: url(data:image/png;base64,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);
+                          background-repeat: no-repeat;
+                          background-position: center;
+                          background-size: 30px;
+                          filter: invert(1);">
+              </bug-report>
+          </div>        </div>
+      </div>
+      <footer class="text-light pt-2 vlabs-footer d-flex flex-column">
+        <div class="row px-5 mx-0">
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Community Links</span>
+            <a href="https://www.sakshat.ac.in/" class="text-light">Sakshat Portal</a>
+            <a href="http://outreach.vlabs.ac.in/" class="text-light">Outreach Portal</a>
+            <a href="https://vlab.co.in/faq" class="text-light">FAQ: Virtual Labs</a>
+          </div>
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Contact Us</span>
+            <span> Phone: General Information: 011-26582050 </span>
+            <span> Email: support@vlabs.ac.in </span>
+          </div>
+          <div class="col d-flex flex-column">
+            <span class="font-weight-bold vlabs-footer-sect-name pb-2 mb-3">Follow Us</span>
+            <div class="social-links">
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #55acee;" href="https://twitter.com/TheVirtualLabs">
+      	  <i class="fab fa-twitter"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #3b5998;" href="https://www.facebook.com/Virtual-Labs-IIT-Delhi-301510159983871/">
+      	  <i class="fab fa-facebook"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #e52d27;" href="https://www.youtube.com/watch?v=asxRaOgk6a0">
+      	  <i class="fab fa-youtube"></i>
+      	</a>
+      	<a class="p-2 mt-1 mr-2 d-inline-flex justify-content-center align-items-center" style="background: #2867B2;" href="https://in.linkedin.com/in/virtual-labs-008ba9136">
+      	  <i class="fab fa-linkedin"></i>
+      	</a>
+            </div>
+          </div>
+        </div>
+        <div class="m-0 py-2 text-center" style="font-family: &quot;Open Sans&quot;, sans-serif; background: #212121;">
+          <a class="text-primary font-weight-bold" href="https://www.gnu.org/licenses/agpl-3.0.en.html"> AGPL 3.0 </a>
+          &nbsp;&amp;&nbsp;
+          <a class="text-primary font-weight-bold" href="https://creativecommons.org/licenses/by-nc-sa/4.0/"> Creative Commons (CC BY-NC-SA 4.0) </a>
+        </div>
+      </footer>
+    <script src="./assets/js/toggleSidebar.js"></script>
+    <script src="./assets/js/event-handler.js"></script>
+
+
+    <script>
+      if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register("sw.js");
+        });
+      }
+    </script>
+  
+
+<script type="module" src="https://cdn.vlabs.ac.in/bug-report/vlabs-bug-report.js"></script><script type="module" src="/exp-network-topologies-iitr/plugins/svc-rating/index.js"></script><script type="module" src="/exp-network-topologies-iitr/plugins/svc-rating/config.js"></script><script type="module" src="https://apis.google.com/js/api.js"></script></body></html>
